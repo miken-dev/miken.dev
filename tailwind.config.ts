@@ -14,14 +14,13 @@ export default {
 		contentPath(import.meta.url, 'svelte')
 	],
 	theme: {
-		[
-		themes.mikendevtheme
-		]	
+		extend: {},
+
 	},
 	plugins: [
 		skeleton({
 			// NOTE: each theme included will increase the size of your CSS bundle
-			themes: [ themes.cerberus, themes.rose ]
+			themes: [ themes.cerberus, themes.rose, mikendevtheme ]
 		})
 	]
 } satisfies Config;

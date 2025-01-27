@@ -14,7 +14,7 @@
 		},
 		{
 			value: 'Full Stack',
-			label: 'I can write your front-end, back-end, and everything in between'
+			label: 'I can write your front-end, mobile app, back-end, and everything in between'
 		}
 	];
 </script>
@@ -145,18 +145,16 @@
 				in:fly={{ y: 200, duration: 1500, delay: 800 }}
 				class="flex flex-wrap items-center justify-center gap-6"
 			>
-				<button
-					class="group flex h-14 items-center rounded-md bg-[#166EA2] px-8 text-lg text-white transition-transform duration-500 hover:scale-110 hover:bg-[#166EA2]/90 dark:bg-[#00A3FF] dark:hover:bg-[#00A3FF]/90"
+				<a
+					href="./contact" class="group flex h-14 items-center rounded-md bg-[#166EA2] px-8 text-lg text-white transition-transform duration-500 hover:scale-110 hover:bg-[#166EA2]/90 dark:bg-[#00A3FF] dark:hover:bg-[#00A3FF]/90"
 				>
 					<span>Contact Me</span>
 					<ArrowRightIcon
 						class="ml-2 size-5 transition-transform duration-300 group-hover:translate-x-4"
 					/>
-				</button>
-				<button
-					class="h-14 rounded-md border-2 border-[#166EA2] px-8 text-lg text-[#166EA2] transition-transform duration-500 hover:scale-110 hover:bg-[#166EA2]/10 dark:border-[#00A3FF] dark:text-[#00A3FF] dark:hover:bg-[#00A3FF]/20"
-					>See my apps</button
-				>
+				</a>
+				<a href="/mobileapps" class="group flex items-center h-14 rounded-md border-2 border-[#166EA2] px-8 text-lg text-[#166EA2] transition-transform duration-500 hover:scale-110 hover:bg-[#166EA2]/10 dark:border-[#00A3FF] dark:text-[#00A3FF] dark:hover:bg-[#00A3FF]/20"
+					><p>See my apps</p></a>
 			</div>
 
 			<!-- Stats -->

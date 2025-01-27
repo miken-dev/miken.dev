@@ -38,7 +38,7 @@
 					<img src={project.image} alt={project.title} class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
 				</div>
 				<CardContent class="p-6">
-					<h3 class="mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-xl font-semibold text-transparent">
+					<h3 class="mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-xl font-semibold text-transparent"> 
 						{project.title}
 					</h3>
 					<p class="mb-4 text-sm">{project.description}</p>

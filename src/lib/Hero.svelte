@@ -19,7 +19,7 @@
 	];
 </script>
 
-<section class="hero bg-background relative overflow-hidden dark:bg-[#030712]">
+<section class=" bg-background relative h-lvh overflow-hidden dark:bg-[#030712]">
 	<!-- Animated Blobs -->
 	<div class="absolute inset-0">
 		<!-- Primary Blob -->
@@ -49,20 +49,59 @@
 
 	<!-- Animated Dots -->
 	<div class="absolute inset-0">
+
 		<div class="relative h-full w-full">
-			{#each Array(100) as _, i}
+			{#each Array(300) as _, i (i)}
+				{@const x = Math.random() * 100}
+				{@const y = Math.random() * 100}
+				{@const size = Math.random() * 3.7 + 1}
+				{@const duration = Math.random() * 10 + 15}
+				{@const delay = Math.random() * -20}
+				{@const pulseDelay = Math.random() * 5}
 				<div
-					class="absolute size-1.5 rounded-full bg-[#166EA2]/30 dark:bg-[#00A3FF]/30"
+					class="absolute rounded-full bg-[#166EA2]/30 dark:bg-[#00A3FF]/30 animate-pulse"
 					style="
-					left: {Math.random() * 100}%;
-					top: {Math.random() * 100}%;
-					animation: floating-dot-{i % 4} {10 + Math.random() * 20}s infinite ease-in-out {Math.random() *
-						-20}s
+					left: {x}%;
+						top: {y}%;
+						width: {size}px;
+					height: {size}px;
+					animation: pulse {duration}s infinite {pulseDelay}s, float {duration}s infinite {delay}s;
+					transform-origin: center;
 					"
 				/>
 			{/each}
 		</div>
 	</div>
+
+	<style>
+	@keyframes float {
+	0%,
+	100% {
+		transform: translate(0, 0);
+	}
+	25% {
+		transform: translate(50px, 50px);
+	}
+	50% {
+		transform: translate(0, 100px);
+	}
+	75% {
+		transform: translate(-50px, 50px);
+	}
+	}
+
+	@keyframes pulse {
+	0%,
+	100% {
+		opacity: 0.3;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 1.0;
+		transform: scale(1.5);
+	}
+	}
+	</style>
 
 	<div class="container relative mx-auto px-4 py-24 sm:py-40">
 		<div class="flex flex-col items-center gap-10 text-center">
@@ -71,11 +110,11 @@
 				in:fly={{ y: -200, duration: 1500, delay: 200 }}
 				class="bg-background/30 group flex items-center gap-3 rounded-full border border-[#166EA2]/20 px-5 py-2 backdrop-blur-sm transition-transform duration-500 hover:scale-110 dark:bg-[#030712]/30"
 			>
-				<SparklesIcon class="size-6 animate-pulse text-[#166EA2]" />
+				<SparklesIcon class="size-6 text-[#166EA2]" />
 				<span class="text-sm font-semibold text-[#166EA2] dark:text-[#00A3FF]"
 					>Indie and Freelance App Development</span
 				>
-				<SparklesIcon class="size-6 animate-pulse text-[#166EA2]" />
+				<SparklesIcon class="size-6  text-[#166EA2]" />
 			</div>
 
 			<!-- Hero title -->
@@ -87,7 +126,7 @@
 				<span class="relative mt-2 block text-[#166EA2] dark:text-[#00A3FF]">
 					Native and Web Apps
 					<span
-						class="absolute bottom-0 left-0 h-3 w-full animate-pulse bg-[#166EA2]/20 dark:bg-[#00A3FF]/20"
+						class="absolute bottom-0 left-0 h-3 w-full animate-bounce bg-[#166EA2]/20 dark:bg-[#00A3FF]/20"
 					/>
 				</span>
 			</h1>
@@ -143,6 +182,34 @@
 </section>
 
 <style>
+	@keyframes float {
+		0%,
+		100% {
+			transform: translate(0, 0);
+		}
+		25% {
+			transform: translate(50px, 50px);
+		}
+		50% {
+			transform: translate(0, 100px);
+		}
+		75% {
+			transform: translate(-50px, 50px);
+		}
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			opacity: 0.3;
+			transform: scale(1);
+		}
+		50% {
+			opacity: 0.6;
+			transform: scale(1.5);
+		}
+	}
+
 	@keyframes blob {
 		0% {
 			transform: translate(0px, 0px) scale(1);
@@ -165,47 +232,5 @@
 	}
 	.animation-delay-4000 {
 		animation-delay: 4s;
-	}
-
-	/* Floating dot animations with different patterns */
-	@keyframes floating-dot-0 {
-		0%,
-		100% {
-			transform: translate(0, 0) scale(1);
-		}
-		50% {
-			transform: translate(100px, -100px) scale(2);
-		}
-	}
-	@keyframes floating-dot-1 {
-		0%,
-		100% {
-			transform: translate(0, 0) scale(1);
-		}
-		50% {
-			transform: translate(-100px, 100px) scale(2);
-		}
-	}
-	@keyframes floating-dot-2 {
-		0%,
-		100% {
-			transform: translate(0, 0) scale(1);
-		}
-		50% {
-			transform: translate(100px, 100px) scale(2);
-		}
-	}
-	@keyframes floating-dot-3 {
-		0%,
-		100% {
-			transform: translate(0, 0) scale(1);
-		}
-		50% {
-			transform: translate(-100px, -100px) scale(2);
-		}
-	}
-
-	.hero {
-		
 	}
 </style>

@@ -6,10 +6,11 @@ import { ArrowRightIcon, SparklesIcon } from "lucide-svelte";
 const stats = [
 	{ value: "Most Major Platforms", label: "iOS, iPadOS, watchOS, tvOS, macOS, Android and the web" },
 	{ value: "Hundreds of Clients", label: "Throughout my career, I've helped clients ranging from Fortune 500 to the smallest of small businesses" },
+	{ value: "Full Stack", label: "I can write your front-end, back-end, and everything in between" },
 ];
 </script>
 
-<section class="relative overflow-hidden bg-background dark:bg-[#030712]">
+<section class="h-lvh relative overflow-hidden bg-background dark:bg-[#030712]">
 	<!-- Animated Blobs -->
 	<div class="absolute inset-0">
 		<!-- Primary Blob -->

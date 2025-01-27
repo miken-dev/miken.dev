@@ -22,9 +22,9 @@
 	</NavBrand>
 	<NavHamburger />
 	<NavUl {activeURL} class="">
-		<NavLi href="/freelance">Freelance</NavLi>
+<!--		<NavLi href="/freelance">Freelance</NavLi> -->
 		<NavLi href="/mobileapps">Mobile Apps</NavLi>
-		<NavLi href="/about">About</NavLi>
+		<!-- <NavLi href="/about">About</NavLi> -->
 		<NavLi href="/contact">Contact Me</NavLi>
 		<NavLi href="https://github.com/miken-dev"><GithubSolid /></NavLi>
 		<NavLi href="https://bsky.app/profile/miken.dev"><TwitterSolid /> </NavLi>

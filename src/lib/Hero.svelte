@@ -8,7 +8,7 @@
 			label: 'iOS, iPadOS, watchOS, tvOS, macOS, Android and the web'
 		},
 		{
-			value: 'Hundreds of Clients',
+			value: 'Dozens of Clients',
 			label:
 				"Throughout my career, I've helped clients ranging from Fortune 500 to the smallest of small businesses"
 		},

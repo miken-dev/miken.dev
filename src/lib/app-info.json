@@ -1,0 +1,24 @@
+[
+	{
+		name: "ImmTV",
+		description: "A third-party, open-source AppleTV client for the self hosted Immich Photos application",
+		image: "",
+		platforms: ["tvOS"],
+		AppleLink: "",
+		GoogleLink: "",
+		GithubLink: "",
+		DirectDownloadLink: "",
+		MoreInfoSlug: "",
+	},
+	{
+		name: "MacOS LGTV Companion",
+		description: "A macOS app that makes using an LG WebOS based TV as a monitor easier",
+		image: "",
+		platforms: ["macOS"],
+		AppleLink: "",
+		GoogleLink: "",
+		GithubLink: "",
+		DirectDownloadLink: "",
+		MoreInfoSlug: "",
+	}
+]
